@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 74.0.3729 (Mac OS X 10.14.3)" package="" timestamp="2019-05-11T03:17:53" id="0" hostname="C02X7E6GJG5J" tests="5" errors="0" failures="0" time="0.965">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36"/>
+  </properties>
+  <testcase name="FooLibComponent should create" time="0.064" classname="Chrome_74_0_3729_(Mac_OS_X_10_14_3).FooLibComponent"/>
+  <testcase name="FooLibService suite should be created" time="0.008" classname="Chrome_74_0_3729_(Mac_OS_X_10_14_3).FooLibService suite"/>
+  <testcase name="FooLibService suite Call to function from a Service" time="0.007" classname="Chrome_74_0_3729_(Mac_OS_X_10_14_3).FooLibService suite"/>
+  <testcase name="FooLibService suite Call to API from Service with Injection" time="0.877" classname="Chrome_74_0_3729_(Mac_OS_X_10_14_3).FooLibService suite"/>
+  <testcase name="FooLibService suite Call to API from Service with TestBed" time="0.009" classname="Chrome_74_0_3729_(Mac_OS_X_10_14_3).FooLibService suite"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
