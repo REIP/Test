@@ -40,8 +40,9 @@ module.exports = function (config) {
       },
     },
 
-    // the default configuration
-    junitReporter: {
+
+    // the default configuration 
+    /* junitReporter: {
       outputDir: '', // results will be saved as $outputDir/$browserName.xml
       outputFile: 'test-results.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
       suite: '', // suite will become the package name attribute in xml testsuite element
@@ -49,14 +50,22 @@ module.exports = function (config) {
       nameFormatter: undefined, // function (browser, result) to customize the name attribute in xml testcase element
       classNameFormatter: undefined, // function (browser, result) to customize the classname attribute in xml testcase element
       properties: {} // key value pair of properties to add to the <properties> section of the report
+    }, */
+
+    junitReporter: {
+      outputFile: 'test-results.xml',
+      useBrowserName: false,
     },
     
-    port: 9876,
+ /*    port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
+    browsers: ['Chrome'], */
+    
     browsers: ['Chrome'],
-    singleRun: false
+    logLevel: config.LOG_INFO,
+    singleRun: true
   });
   
 };
