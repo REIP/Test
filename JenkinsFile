@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    tools {nodejs "NodeJS10150"}
+      stages {    
+            stage('Cloning Git') {
+              steps {
+                git 'https://github.com/REIP/Test'
+              }
+            }
+              
+            stage('Install dependencies') {
+              steps {
+                sh 'npm install'
+              }
+            }
+             
+            stage('Test') {
+              steps {
+                 sh 'npm run test foo-lib'
+              }
+            }
+        }   
+    }
