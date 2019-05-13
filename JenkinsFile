@@ -28,7 +28,7 @@ pipeline {
                     keepAll             : true,
                     reportDir            : 'coverage',
                     reportFiles          : 'index.html',
-                    reportName           : 'Test Report'
+                    reportName           : 'Coverage Report'
                  ]
                }
              }
