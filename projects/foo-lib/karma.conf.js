@@ -42,6 +42,7 @@ module.exports = function (config) {
 
 
     // the default configuration 
+    //Local env
     /* junitReporter: {
       outputDir: '', // results will be saved as $outputDir/$browserName.xml
       outputFile: 'test-results.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
@@ -52,20 +53,41 @@ module.exports = function (config) {
       properties: {} // key value pair of properties to add to the <properties> section of the report
     }, */
 
+    //Jenkins env
     junitReporter: {
       outputFile: 'test-results.xml',
       useBrowserName: false,
     },
     
- /*    port: 9876,
+    //Local env
+    /*port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'], */
-    
-    browsers: ['Chrome'],
+
+    //Jenkins env
+    customLaunchers: {
+      ChromeHeadless: {
+        base: 'Chrome',
+        flags: [
+          '--headless',
+          '--disable-gpu',
+          '--no-sandbox',
+          '--remote-debugging-port=9222',
+        ]
+      }
+    },
+    //Jenkins env
+    browsers: ['ChromeHeadless'],
+
     logLevel: config.LOG_INFO,
+
+     //Jenkins env
     singleRun: true
+
+     //Local env
+     // singleRun: true
   });
   
 };
