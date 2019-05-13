@@ -26,7 +26,7 @@ pipeline {
                     allowMissing         : false,
                     alwaysLinkToLastBuild: false,
                     keepAll             : true,
-                    reportDir            : 'output/coverage/jest',
+                    reportDir            : 'coverage',
                     reportFiles          : 'index.html',
                     reportName           : 'Test Report'
                  ]
